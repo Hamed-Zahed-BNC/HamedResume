@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -32,7 +32,7 @@ jobs:
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: HamedResume/MyResume/MyResume
+          path: MyResume/MyResume
 
       - name: Deploy to GitHub Pages
         id: deployment
