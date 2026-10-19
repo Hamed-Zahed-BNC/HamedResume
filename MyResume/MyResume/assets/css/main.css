@@ -535,13 +535,13 @@ section,
   z-index: 1;
 }
 
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
+    .hero:before {
+        content: "";
+        background: transparent;
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
 
 .hero .container {
   position: relative;
@@ -709,10 +709,10 @@ section,
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
+    padding: 0 20px 20px 0;
+    margin-top: -2px;
+    border-right: 2px solid var(--accent-color);
+    position: relative;
 }
 
 .resume .resume-item h4 {
@@ -744,17 +744,17 @@ section,
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
-}
+    .resume .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        right: -9px;
+        top: 0;
+        background: var(--background-color);
+        border: 2px solid var(--accent-color);
+    }
 
 /*--------------------------------------------------------------
 # Portfolio Section
@@ -1457,3 +1457,470 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.plus-number {
+    display: inline-flex;
+    align-items: center;
+    direction: ltr;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Accountant Portfolio Theme
+   Navy + Gold + Purple
+   ========================= */
+:root {
+    --accountant-navy: #102a43;
+    --accountant-navy-dark: #0b1f33;
+    --accountant-gold: #c9a227;
+    --accountant-gold-light: #e1c45a;
+    --accountant-purple: #6b4ca5;
+    --accountant-purple-light: #8b6bc1;
+    --accountant-bg: #f8f7f3;
+    --accountant-text: #26364a;
+}
+
+/* Background & text */
+body {
+    background: var(--accountant-bg);
+    color: var(--accountant-text);
+}
+
+/* =========================
+   Section Titles
+   ========================= */
+
+.section-title {
+    text-align: center !important;
+    margin-bottom: 45px;
+}
+
+    .section-title h2 {
+        color: var(--accountant-navy) !important;
+        font-weight: 700;
+        text-align: center !important;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+    }
+
+        /* Gold line under titles */
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--accountant-gold);
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 3px;
+        }
+
+    .section-title p {
+        text-align: center !important;
+        color: #687789;
+    }
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero:before {
+    background: transparent !important;
+}
+
+.hero img {
+    filter: none !important;
+}
+
+.hero .social-links {
+    display: none !important;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+#header .navmenu a {
+    color: var(--accountant-navy);
+}
+
+    #header .navmenu a:hover,
+    #header .navmenu a.active {
+        color: var(--accountant-gold) !important;
+    }
+
+    #header .navmenu a i {
+        color: var(--accountant-purple);
+    }
+
+    #header .navmenu a:hover i,
+    #header .navmenu a.active i {
+        color: var(--accountant-gold);
+    }
+
+/* =========================
+   About
+   ========================= */
+
+.about h2 {
+    color: var(--accountant-navy);
+}
+
+.about ul li i {
+    color: var(--accountant-gold);
+}
+
+.about strong {
+    color: var(--accountant-navy);
+}
+
+/* =========================
+   Stats
+   ========================= */
+
+.stats .stats-item {
+    text-align: center;
+}
+
+    .stats .stats-item span {
+        color: var(--accountant-gold) !important;
+        font-weight: 700;
+    }
+
+    .stats .stats-item p {
+        color: var(--accountant-navy);
+        font-weight: 600;
+    }
+
+    .stats .stats-item i {
+        color: var(--accountant-purple) !important;
+    }
+
+/* =========================
+   Skills
+   ========================= */
+
+.skills .progress-bar-wrap {
+    background: #e8e5df;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills .progress-bar {
+    background: linear-gradient( 90deg, var(--accountant-purple), var(--accountant-gold) ) !important;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.skills .skill {
+    color: var(--accountant-navy);
+}
+
+    .skills .skill .val {
+        color: var(--accountant-gold);
+        font-weight: 700;
+    }
+
+/* =========================
+   Resume
+   ========================= */
+
+.resume .resume-title {
+    color: var(--accountant-navy);
+}
+
+.resume .resume-item {
+    border-right-color: var(--accountant-gold) !important;
+}
+
+    .resume .resume-item::before {
+        border-color: var(--accountant-gold) !important;
+    }
+
+    .resume .resume-item h4 {
+        color: var(--accountant-purple);
+    }
+
+    .resume .resume-item h5 {
+        color: var(--accountant-gold);
+    }
+
+/* =========================
+   Services
+   ========================= */
+
+.services .service-item {
+    background: #ffffff;
+    border: 1px solid #eee9dd;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.07);
+}
+
+    .services .service-item h3 {
+        color: var(--accountant-navy);
+    }
+
+    .services .service-item p {
+        color: #657386;
+    }
+
+    /* All service icons */
+    .services .service-item .icon i {
+        color: var(--accountant-gold) !important;
+    }
+
+    /* Remove original template colors */
+    .services .service-item.item-cyan,
+    .services .service-item.item-orange,
+    .services .service-item.item-teal,
+    .services .service-item.item-red,
+    .services .service-item.item-indigo,
+    .services .service-item.item-pink {
+        --color: var(--accountant-purple) !important;
+    }
+
+    /* Service hover */
+    .services .service-item:hover {
+        border-color: var(--accountant-gold);
+        transform: translateY(-5px);
+    }
+
+        .services .service-item:hover h3 {
+            color: var(--accountant-purple);
+        }
+
+/* =========================
+   Contact
+   ========================= */
+
+.contact .info-item i {
+    color: var(--accountant-gold);
+}
+
+.contact .info-item h3 {
+    color: var(--accountant-navy);
+}
+
+.contact .info-item p {
+    color: var(--accountant-text);
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.footer {
+    background: var(--accountant-navy-dark) !important;
+}
+
+    .footer .sitename {
+        color: var(--accountant-gold) !important;
+    }
+
+    .footer p {
+        color: #d9dee5;
+    }
+
+    .footer .social-links a {
+        color: var(--accountant-gold);
+    }
+
+        .footer .social-links a:hover {
+            color: var(--accountant-purple-light);
+        }
+
+/* =========================
+   RTL
+   ========================= */
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+    [dir="rtl"] .section-title {
+        text-align: center !important;
+    }
+
+
+<style >
+/* ================================
+       Persian / RTL Layout
+       ================================ */
+html {
+    direction: rtl;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Main content */
+.main {
+    direction: rtl;
+}
+
+/* Section titles */
+.section-title {
+    direction: rtl;
+    text-align: right !important;
+}
+
+    .section-title h2,
+    .section-title p {
+        text-align: right !important;
+    }
+
+/* About */
+.about {
+    direction: rtl;
+}
+
+    .about .content {
+        text-align: right !important;
+    }
+
+        .about .content ul {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .about .content li {
+            text-align: right;
+        }
+
+/* Stats */
+.stats {
+    direction: rtl;
+    text-align: center;
+}
+
+/* Skills */
+.skills {
+    direction: rtl;
+}
+
+    .skills .skill {
+        direction: rtl;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
+
+        .skills .skill .val {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+/* Resume */
+.resume {
+    direction: rtl;
+    text-align: right;
+}
+
+    .resume .resume-item {
+        text-align: right;
+    }
+
+        .resume .resume-item ul {
+            padding-right: 20px;
+            padding-left: 0;
+        }
+
+    .resume .resume-title,
+    .resume h4,
+    .resume h5,
+    .resume p {
+        text-align: right;
+    }
+
+/* Services */
+.services {
+    direction: rtl;
+}
+
+    .services .section-title {
+        text-align: right !important;
+    }
+
+    .services .service-item {
+        direction: rtl;
+        text-align: right;
+    }
+
+        .services .service-item h3,
+        .services .service-item p {
+            text-align: right;
+        }
+
+/* Contact */
+.contact {
+    direction: rtl;
+    text-align: right;
+}
+
+    .contact .section-title {
+        text-align: right !important;
+    }
+
+    .contact .info-item {
+        direction: rtl;
+        text-align: right;
+    }
+
+        .contact .info-item > div {
+            text-align: right;
+        }
+
+/* Footer */
+.footer {
+    direction: rtl;
+    text-align: center;
+}
+
+/* Header / Navigation
+       Keep sidebar position unchanged */
+.header {
+    direction: rtl;
+}
+
+.navmenu {
+    direction: rtl;
+}
+
+    .navmenu ul {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navmenu a {
+        direction: rtl;
+        text-align: right;
+    }
+
+/* Prevent Persian text from being affected by LTR template rules */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+strong {
+    direction: rtl;
+}
+
+/* Numbers, phone and email remain correctly readable */
+.stats-item,
+.purecounter,
+.contact .info-item p {
+    unicode-bidi: plaintext;
+}
+
+</style >
